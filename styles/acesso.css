@@ -89,3 +89,17 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+.controlador small{
+  display: none;
+  color:red;
+  font-size: 12px;
+}
+
+.controlador.erro input{
+  border-color: red;
+}
+
+.controlador.erro small{
+  display: block;
+}

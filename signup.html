@@ -12,7 +12,7 @@
 
   <!-- ---------------------- lógica aplicada no registro -------------------- -->
   <script src="/scripts/utils.js"></script>
-  <script src="/scripts/signup.js"></script>
+  <script src="./scripts/signup.js"></script>
 
 </head>
 
@@ -27,28 +27,37 @@
         <p>To-Do App</p>
       </div>
 
-      <label>
-        Nome:
-        <input type="text">
-      </label>
-      <label>
-        Apelido:
-        <input type="text">
-      </label>
-      <label>
-        Email:
-        <input type="text">
-      </label>
-      <label>
-        Senha:
-        <input type="password">
-      </label>
-      <label>
-        Repetir senha:
-        <input type="password">
-      </label>
+      <div class="controlador">
+        <label>Nome:</label>
+        <input id="inputNome" type="text" required>
+        <small>Por favor preencha o campo nome corretamente</small>
+      </div>
 
-      <button>Criar conta</button>
+      <div class="controlador">
+        <label>Sobrenome:</label>
+        <input id="inputSobrenome" type="text" required>
+        <small>Por favor preencha o campo apelido corretamente</small>
+      </div>
+
+      <div>
+        <label class="controlador">Email:</label>
+        <input id="inputEmail" type="text" required>
+        <small>Por favor preencha o campo email corretamente</small>
+      </div>
+
+      <div class="controlador">
+        <label>Senha:</label>
+        <input id="inputSenha" type="password" required>
+        <small>Por favor preencha o campo senha corretamente</small>
+      </div>
+      
+      <div class="controlador">
+      <label>Repetir senha:</label>
+        <input id="inputRepetirSenha" type="password" required>
+        <small>Por favor preencha o campo senha corretamente</small>
+      </div>
+      
+      <button id="btCadastrar">Criar conta</button>
 
     </form>
     <div class="ingressar">
