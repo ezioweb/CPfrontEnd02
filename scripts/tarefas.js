@@ -4,6 +4,17 @@ let novaTarefaRef = document.querySelector('#novaTarefa')
 let skeletonRef = document.querySelector('#skeleton')
 let tarefasPendentesRef = document.querySelector('.tarefas-pendentes')
 
+const dataAtual = new Date()
+const dataFormatada = dataAtual.toLocaleDateString(
+    'pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }
+)
+
+
+
 let requestConfiguration = {
     headers: {
         'Content-Type': 'application/json',
@@ -53,7 +64,7 @@ adicionaTarefaRef.addEventListener('click', event => {
                                 <div class="not-done"></div>
                                 <div class="descricao">
                                   <p class="nome">${data.description}</p>
-                                  <p class="timestamp">Criada em: ${data.createdAt}</p>
+                                  <p class="timestamp">Criada em: ${dataFormatada}</p>
                                 </div>
                               </li>             `
                     //  }
