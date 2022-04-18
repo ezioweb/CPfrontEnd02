@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ----------------------------- estilos CSS ----------------------------- -->
-  <link rel="stylesheet" href="./styles/tarefas.css">
+  <link rel="stylesheet" href="./styles/tarefas_dark.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
@@ -33,7 +33,9 @@
 
     <div class="user-info">
       <p id="nameUser">Nome usuário</p>
-      <div class="user-image"></div>
+      <div class="user-image">
+        <img src="./assets/user-ninja.png" width="28px" alt="">
+      </div>
       <p id="closeApp">Finalizar sessão</i>
       </p>
     </div>
@@ -42,10 +44,11 @@
 
   <form class="nova-tarefa">
     <div class="not-done "></div>
-    <input id="novaTarefa" type="text" placeholder="Nova tarefa">
+    <input id="novaTarefa" type="text" placeholder="Nova tarefa" required>
     <button id="adicionaTarefa" type="submit">
-      <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
+    <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
+    
   </form>
 
 

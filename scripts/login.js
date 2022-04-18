@@ -1,6 +1,23 @@
+import validacao from './validacao.js'
 let buttonLoginRef = document.querySelector('#btAcessar')
 let inputEmailRef = document.querySelector('#inputEmail')
 let inputSenhaRef = document.querySelector('#inputPassword')
+let botaoAcessarReferencia = document.querySelector('#btAcessar')
+let controladoresReferencia = document.querySelectorAll('.controlador')
+// let inputNomeReferencia = document.querySelector('#inputEmail')
+// let inputSobrenomeReferencia = document.querySelector('#inputPassword')
+
+
+
+validacao(controladoresReferencia, botaoAcessarReferencia)
+
+botaoAcessarReferencia.addEventListener('click', function (event) {
+    
+    event.preventDefault()       
+
+    console.log("teste")
+})
+
 
 buttonLoginRef.addEventListener('click', event => {
     event.preventDefault()
@@ -25,17 +42,15 @@ buttonLoginRef.addEventListener('click', event => {
 
     fetch('https://ctd-todo-api.herokuapp.com/v1/users/login', requestConfiguration).then(
         response => {
-            response.json().then(
-
-                data => {
-
-                    localStorage.setItem('token', data.jwt)
-                    window.location.href = './tarefas.html'
-                    
-                }
-
-
-            )
+            if (response.ok) {
+                response.json().then(
+                    data => {
+                        console.log(data)
+                        localStorage.setItem('token', data.jwt)
+                         window.location.href = './tarefas.html'
+                    }
+                )
+            }
         }
     )
 })
