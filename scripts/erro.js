@@ -29,7 +29,6 @@ const validate = () => {
         if(input.checkValidity()){
             input.classList.remove('error')
             /* input.classList.add('ok') */
-            input.style.backgroundColor = 'red'
             buttonCadastrarRef.disable = false
         }
         else {
