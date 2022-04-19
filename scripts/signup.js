@@ -10,14 +10,13 @@ let controladoresReferencia = document.querySelectorAll('.controlador')
 
 
 
-validacao(controladoresReferencia, btAcessarRef)
-    btAcessarRef.addEventListener('click', function (event) {
-    event.preventDefault();
-})
 
+
+validacao(controladoresReferencia, btAcessarRef)
 
 btAcessarRef.addEventListener('click', event => {
 
+    if(senhaRef.value)
     event.preventDefault()
 
     let users = {
@@ -59,9 +58,13 @@ emailRef .addEventListener("keyup", function (event) {
     if (emailRef.validity.typeMismatch) {
         emailRef.setCustomValidity("Você deve inserir um endereço de e-mail");
     } else {
-        emailRef .setCustomValidity("");
+        emailRef.setCustomValidity("");
     }
   }); 
+
+  
+
+
 
 //    if(validarPassword(senhaRef.value, repetirSenha.value)){
 //     Swal.fire({

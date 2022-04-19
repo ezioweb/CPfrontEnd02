@@ -5,9 +5,7 @@ let skeletonRef = document.querySelector('#skeleton')
 let tarefasPendentesRef = document.querySelector('.tarefas-pendentes')
 let tarefasTerminadasRef = document.querySelector('.tarefas-terminadas')
 let finalizarSessaoRef = document.querySelector('#closeApp')
-
-// limpar input da tarefa nova
-// botão deletar 
+ 
 // botão editar 
 // validação senha
 // documentação e comentários boas práticas
@@ -17,7 +15,7 @@ window.onload = function () {
     getTasks();
 }
 
-// Formatação da dados
+// Formatação de data 
 const dataAtual = new Date()
 const dataFormatada = dataAtual.toLocaleDateString(
     'pt-BR', {
@@ -27,6 +25,8 @@ const dataFormatada = dataAtual.toLocaleDateString(
     }
 )
 
+
+// Finaliza a sessão
 finalizarSessaoRef.addEventListener('click', event => {
     event.preventDefault()
     localStorage.removeItem('token')
