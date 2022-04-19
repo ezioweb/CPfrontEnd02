@@ -37,6 +37,7 @@ a {
   opacity: .4;
   margin-left: 1em;
   align-items: center;
+  text-align: center;
 }
 
 #closeApp{
