@@ -68,7 +68,7 @@ adicionaTarefaRef.addEventListener('click', event => {
     }
 
     if(novaTarefaRef.value === ""){
-        Swal.fire('Por favor de um titulo a sua tarefa')
+        Swal.fire('Escreve aí preguiçoso!')
     }else{
     fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfigurationPost)
         .then(response => {
@@ -95,7 +95,7 @@ adicionaTarefaRef.addEventListener('click', event => {
         Swal.fire({
             
             icon: 'success',
-            title: 'Tarefa salva com sucesso',
+            title: 'Mais trabalho pendente',
             showConfirmButton: false,
             timer: 1500
           })
@@ -177,7 +177,8 @@ function deletaTarefa(id) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Excluir'
+        confirmButtonText: 'Mandar já',
+        cancelButtonText: 'Deixa quieto'
       }).then((result) => {
           
         if (result.isConfirmed) {
@@ -230,7 +231,7 @@ function getTasks() {
                                             <div class="not-done" onclick="terminarTarefa(${task.id})"></div>
                                             <div class="descricao">
                                               <p class="nome">${task.description}</p>
-                                              <p class="timestamp">Criada em: ${dataFormatada}</p>
+                                              <p class="timestamp" id="data">Criada em: ${dataFormatada}</p>
                                               <div>
                                                 <button><i id="${task.id}" class="far fa-trash-alt" onclick="deletaTarefa(${task.id})"></i></button>
                                               </div>

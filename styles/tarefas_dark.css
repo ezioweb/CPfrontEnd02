@@ -133,6 +133,7 @@ a {
   margin: 2em 15%;
 }
 
+
 .tarefa {
   display: flex;
   align-items: center;
@@ -199,6 +200,7 @@ a {
 .tarefas .timestamp {
   font-size: .9em;
   color: #000000;
+  
 }
 
 /* Tarefas terminadas ----------------------------------------------------------- */
