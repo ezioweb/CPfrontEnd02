@@ -36,7 +36,8 @@ a {
   background-color: white;
   opacity: .4;
   margin-left: 1em;
-  text-align: center;
+  align-items: center;
+
 }
 
 #closeApp{
