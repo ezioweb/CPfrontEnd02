@@ -82,7 +82,7 @@ adicionaTarefaRef.addEventListener('click', event => {
                     console.log(dados)
                     skeletonRef.remove('#skeleton');
                     tarefasPendentesRef.innerHTML += `
-                                <li class="tarefa">
+                                <li class="tarefa" data-aos="fade-up-right">
                                 <div class="not-done" onclick="terminarTarefa(${dados.id})"></div>
                                 <div class="descricao">
                                   <p class="nome">${dados.description}</p>
