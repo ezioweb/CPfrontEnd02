@@ -8,17 +8,18 @@
   <title>To-Do App</title>
 
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
-  <link rel="stylesheet" href="styles/acesso_dark.css">
+  <link rel="stylesheet" href="styles/acesso.css">
 
   <!-- ---------------------- lógica aplicada no registro -------------------- -->
   <!-- <script src="/scripts/utils.js"></script> -->
   
+
 </head>
 
 <body>
 
   <div class="left">
-    <img src="./assets/pessoa-signup_dark.png" alt="">
+    <img src="./assets/pessoa-signup.png" alt="">
   </div>
   <div class="right">
     <form>
@@ -28,32 +29,32 @@
       <div class="controlador">
         <label>Nome:</label>
         <input id="inputNome" type="text" required>
-        <small>Por favor preencha o campo NOME corretamente</small>
+        <small>Por favor preencha o campo apelido corretamente</small>
       </div>
 
 
       <div class="controlador">
         <label>Sobrenome:</label>
         <input id="inputSobrenome" type="text" required>
-        <small>Por favor preencha o campo SOBRENOME corretamente</small>
+        <small>Por favor preencha o campo apelido corretamente</small>
       </div>
 
       <div class="controlador">
         <label >Email:</label>
         <input id="inputEmail" type="email" required>
-        <small>Por favor preencha o campo EMAIL corretamente</small>
+        <small>Por favor preencha o campo email corretamente</small>
       </div>
 
       <div class="controlador">
         <label>Senha:</label>
         <input id="inputSenha" type="password" required>
-        <small>Por favor preencha o campo SENHA corretamente</small>
+        <small>Por favor preencha o campo senha corretamente</small>
       </div>
       
-      <div class="controlador">
+      <div class="controlador" id="senhaIgual">
       <label>Repetir senha:</label>
-        <input id="inputRepetirSenha" type="password">
-        <small>Por favor preencha o campo SENHA corretamente</small>
+        <input id="inputRepetirSenha" type="password" required>
+        <small>senha diferente</small>
       </div>
       
       <button id="btCadastrar">Criar conta</button>
@@ -65,7 +66,7 @@
   </div>
 
 
-  <script src="./scripts/erro.js" type="module"></script>
+  <script src="./scripts/signup.js" type="module"></script>
 </body>
 
 </html>
