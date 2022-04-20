@@ -97,6 +97,11 @@ a{
   justify-content: center;
 }
 
+.ingressar a{
+  font-size: 1.2em;
+  text-align: center;
+}
+
 .controlador small{
   display: none;
   color:red;
