@@ -1,24 +1,22 @@
 import validacao from './validacao.js'
-
 let btAcessarRef = document.querySelector('#btCadastrar')
 let nomeRef = document.querySelector('#inputNome')
 let sobrenomeRef = document.querySelector('#inputSobrenome')
 let emailRef = document.querySelector('#inputEmail')
 let senhaRef = document.querySelector('#inputSenha')
-let repetirSenha = document.querySelector('inputRepetirSenha')
+let repetirSenhaRef = document.querySelector('#inputRepetirSenha')
 let controladoresReferencia = document.querySelectorAll('.controlador')
+let SenhaIgualRef = document.querySelector('#senhaIgual')
 
 
 
-
-
+// validação de campos
 validacao(controladoresReferencia, btAcessarRef)
 
+// Botão acessar aplicativo
 btAcessarRef.addEventListener('click', event => {
-
-    if(senhaRef.value)
     event.preventDefault()
-
+    if(senhaRef.value === repetirSenhaRef.value){
     let users = {
         firstName: nomeRef.value,
         lastName: sobrenomeRef.value,
@@ -47,54 +45,12 @@ btAcessarRef.addEventListener('click', event => {
                 )
             }
         }
-    )
-
-
+    )  
+    }else{
+        SenhaIgualRef.classList.add('erro')
+    }
+ 
 })
 
 
-emailRef .addEventListener("keyup", function (event) {
-    event.preventDefault()
-    if (emailRef.validity.typeMismatch) {
-        emailRef.setCustomValidity("Você deve inserir um endereço de e-mail");
-    } else {
-        emailRef.setCustomValidity("");
-    }
-  }); 
-
   
-
-
-
-//    if(validarPassword(senhaRef.value, repetirSenha.value)){
-//     Swal.fire({
-//         icon: 'error',
-//         title: 'Ops...',
-//         text: 'As senhas não são iguais'
-//       }) 
-//     }
-//       if(errorList=={}){
-//         mostrarSpinner();
-       
-//         usuario = {
-//             nome: nameRef.value,
-//             sobrenome: sobreRef.value,
-//             email: emailRef.value,
-//             password: pwdRef.value
-//         }
-
-//         if(criarUsuario(usuario)){
-//             window.location.href = "tarefas.html";
-//         }
-//     }else{
-//         errorList = {};
-//     }
-
-//   }
-//   let btAcessarRef = document.querySelector('#btCadastrar')
-//   let nomeRef = document.querySelector('#inputNome')
-//   let sobrenomeRef = document.querySelector('#inputSobrenome')
-//   let emailRef = document.querySelector('#inputEmail')
-//   let senhaRef = document.querySelector('#inputSenha')
-//   let repetirSenha = document.querySelector('inputRepetirSenha')
-//   let controladoresReferencia = document.querySelectorAll('.controlador')

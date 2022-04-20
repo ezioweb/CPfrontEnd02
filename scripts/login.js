@@ -4,20 +4,13 @@ let inputEmailRef = document.querySelector('#inputEmail')
 let inputSenhaRef = document.querySelector('#inputPassword')
 let botaoAcessarReferencia = document.querySelector('#btAcessar')
 let controladoresReferencia = document.querySelectorAll('.controlador')
-let inputNomeReferencia = document.querySelector('#inputEmail')
-let inputSobrenomeReferencia = document.querySelector('#inputPassword')
 
 
 
+// validação dos campos
 validacao(controladoresReferencia, botaoAcessarReferencia)
 
-botaoAcessarReferencia.addEventListener('click', function (event) {
-    
-    event.preventDefault()       
-    
-})
-
-
+// botão de acessar aplicativo
 buttonLoginRef.addEventListener('click', event => {
     event.preventDefault()
 

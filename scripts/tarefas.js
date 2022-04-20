@@ -5,11 +5,6 @@ let skeletonRef = document.querySelector('#skeleton')
 let tarefasPendentesRef = document.querySelector('.tarefas-pendentes')
 let tarefasTerminadasRef = document.querySelector('.tarefas-terminadas')
 let finalizarSessaoRef = document.querySelector('#closeApp')
- 
-// botão editar 
-// validação senha
-// documentação e comentários boas práticas
-// opcional gerar lista de erros
 
 window.onload = function () {
     getTasks();
@@ -79,7 +74,6 @@ adicionaTarefaRef.addEventListener('click', event => {
         .then(response => {
             response.json().then(
                 dados => {
-                    console.log(dados)
                     skeletonRef.remove('#skeleton');
                     tarefasPendentesRef.innerHTML += `
                                 <li class="tarefa">
@@ -177,11 +171,13 @@ let configuracaoDeletaAutorizado = {
 
 function deletaTarefa(id) {
     Swal.fire({
-        title: 'Tem certeza que deseja deletar essa tarefa?',
+        title: 'Deseja mandar essa porcaria para o espaço?',
+        imageUrl: 'https://i.pinimg.com/564x/c3/31/52/c3315210b495973e2f0d1b4484e8851d.jpg',
+        imageWidth: 200,
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Deletar'
+        confirmButtonText: 'Excluir'
       }).then((result) => {
           
         if (result.isConfirmed) {
@@ -194,7 +190,7 @@ function deletaTarefa(id) {
                 }
             )
           Swal.fire(
-            'Tarefa deletada com sucesso',
+            'Mais um lixo espacial detectado',
           )
         }
       })
@@ -211,7 +207,6 @@ function getTasks() {
             response => {
                 response.json().then(
                     tasks => {
-                        console.log(tasks)
                         tarefasTerminadasRef.innerHTML = ""
                         tarefasPendentesRef.innerHTML = ""
                         for (let task of tasks) {
@@ -248,3 +243,5 @@ function getTasks() {
             }
         )
 }
+
+
